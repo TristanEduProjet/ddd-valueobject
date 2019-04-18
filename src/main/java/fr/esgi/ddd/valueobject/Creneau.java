@@ -1,4 +1,4 @@
-package fr.esgi.ddd;
+package fr.esgi.ddd.valueobject;
 
 import lombok.Builder;
 import lombok.Data;
@@ -21,14 +21,14 @@ public class Creneau implements Serializable {
     @NonNull @NotNull
     private final LocalDateTime end;
 
-    public Creneau(@NonNull final LocalDateTime start, @NonNull final LocalDateTime end) {
+    public Creneau(@NonNull final LocalDateTime start, @NonNull final LocalDateTime end) throws NullPointerException, ValidationException {
         this.start = start;
         this.end = end;
         if(start.isAfter(end) || start.isEqual(end))
             throw new ValidationException("Start must be before the end");
     }
 
-    public Creneau(@NonNull final LocalDateTime from, @NonNull final Duration duration) {
+    public Creneau(@NonNull final LocalDateTime from, @NonNull final Duration duration) throws NullPointerException, ValidationException {
         this(from, from.plus(duration));
     }
 }
