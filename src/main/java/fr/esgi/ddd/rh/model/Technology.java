@@ -1,4 +1,4 @@
-package fr.esgi.ddd;
+package fr.esgi.ddd.rh.model;
 
 public enum Technology {
     JAVA,

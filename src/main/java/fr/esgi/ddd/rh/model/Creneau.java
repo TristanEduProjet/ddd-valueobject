@@ -1,13 +1,11 @@
-package fr.esgi.ddd.valueobject;
+package fr.esgi.ddd.rh.model;
 
 import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
-import lombok.Value;
 
 import javax.validation.ValidationException;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
 import java.io.Serializable;
 import java.time.Duration;
 import java.time.LocalDateTime;

@@ -1,6 +1,5 @@
-package fr.esgi.ddd.valueobject;
+package fr.esgi.ddd.rh.model;
 
-import fr.esgi.ddd.Technology;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +9,6 @@ import java.util.HashSet;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatNullPointerException;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.ThrowableAssert.catchThrowable;
 
 public class ProfilTest {

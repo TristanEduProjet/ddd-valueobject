@@ -1,6 +1,5 @@
-package fr.esgi.ddd.valueobject;
+package fr.esgi.ddd.rh.model;
 
-import fr.esgi.ddd.Technology;
 import org.junit.jupiter.api.Test;
 
 import javax.validation.ValidationException;
@@ -23,8 +22,7 @@ public class ExperienceTest {
 
     @Test
     void should_not_create_when_year_negative() {
-        assertThatThrownBy(() -> new Experience(-1, Technology.CPP))
-                .isInstanceOf(ValidationException.class);
+        assertThatThrownBy(() -> new Experience(-1, Technology.CPP)).isInstanceOf(ValidationException.class);
     }
 
     @Test

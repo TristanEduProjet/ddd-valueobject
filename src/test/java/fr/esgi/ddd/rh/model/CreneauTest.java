@@ -1,4 +1,4 @@
-package fr.esgi.ddd.valueobject;
+package fr.esgi.ddd.rh.model;
 
 import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
 import org.junit.jupiter.api.Test;

@@ -1,8 +1,7 @@
-package fr.esgi.ddd.entity;
+package fr.esgi.ddd.rh.model;
 
-import fr.esgi.ddd.InvalidStateException;
+import fr.esgi.ddd.rh.commun.errors.InvalidStateException;
 import lombok.AccessLevel;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.Setter;
@@ -15,7 +14,7 @@ import java.util.UUID;
 
 //@Builder
 @Data
-public class Entretien implements Serializable {
+public class EntretienEntity implements Serializable {
     @NonNull @NotNull
     private final UUID id = UUID.randomUUID();
 
@@ -25,11 +24,11 @@ public class Entretien implements Serializable {
     @NonNull @NotNull @Setter(AccessLevel.NONE)
     private Optional<String> reasonCancel = Optional.empty();
 
-    @NonNull @NotNull Object creneau;
-    @NonNull @NotNull Object recruteur;
-    @NonNull @NotNull Object candidat;
+    @NonNull @NotNull TimeRange creneau;
+    @NonNull @NotNull ConsultantRecruteur recruteur;
+    @NonNull @NotNull Candidat candidat;
 
-    public Entretien(@NonNull final Object creneau, @NonNull final Object recruteur, @NonNull final Object candidat) throws NullPointerException, ValidationException {
+    public EntretienEntity(@NonNull final TimeRange creneau, @NonNull final ConsultantRecruteur recruteur, @NonNull final Candidat candidat) throws NullPointerException, ValidationException {
         this.creneau = creneau;
         this.recruteur = recruteur;
         this.candidat = candidat;

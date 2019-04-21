@@ -1,6 +1,6 @@
-package fr.esgi.ddd.valueobject;
+package fr.esgi.ddd.rh.model;
 
-import fr.esgi.ddd.Technology;
+import fr.esgi.ddd.rh.commun.utility.BeanValidator;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
@@ -11,7 +11,7 @@ import javax.validation.constraints.PositiveOrZero;
 
 @Builder
 @Data
-public class Experience implements Comparable<Experience> {
+public class Experience implements Comparable<Experience> { //TODO Map.Entry<Technology, Integer> instead
     @PositiveOrZero
     private final int nbExp;
 

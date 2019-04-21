@@ -1,4 +1,4 @@
-package fr.esgi.ddd.valueobject;
+package fr.esgi.ddd.rh.commun.utility;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -16,7 +16,7 @@ import java.util.Set;
  * Utility class for simplifying validation in ValueObjects
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-class BeanValidator {
+public class BeanValidator {
     @NonNull @Getter
     private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
